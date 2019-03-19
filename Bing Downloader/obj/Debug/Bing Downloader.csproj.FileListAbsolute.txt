@@ -1,0 +1,15 @@
+C:\Vitor Hugo\CSharp14\Bing Downloader\Bing Downloader\bin\Debug\Bing Downloader.exe
+C:\Vitor Hugo\CSharp14\Bing Downloader\Bing Downloader\bin\Debug\Bing Downloader.pdb
+C:\Vitor Hugo\CSharp14\Bing Downloader\Bing Downloader\obj\Debug\Bing_Downloader.formBing.resources
+C:\Vitor Hugo\CSharp14\Bing Downloader\Bing Downloader\obj\Debug\Bing_Downloader.Properties.Resources.resources
+C:\Vitor Hugo\CSharp14\Bing Downloader\Bing Downloader\obj\Debug\Bing Downloader.csproj.GenerateResource.Cache
+C:\Vitor Hugo\CSharp14\Bing Downloader\Bing Downloader\obj\Debug\Bing Downloader.exe
+C:\Vitor Hugo\CSharp14\Bing Downloader\Bing Downloader\obj\Debug\Bing Downloader.pdb
+G:\Backup\Backup\Backup\Vitor Hugo\CSharp14\Bing Downloader\Bing Downloader\bin\Debug\Bing Downloader.exe
+G:\Backup\Backup\Backup\Vitor Hugo\CSharp14\Bing Downloader\Bing Downloader\bin\Debug\Bing Downloader.pdb
+G:\Backup\Backup\Backup\Vitor Hugo\CSharp14\Bing Downloader\Bing Downloader\obj\Debug\Bing Downloader.csprojResolveAssemblyReference.cache
+G:\Backup\Backup\Backup\Vitor Hugo\CSharp14\Bing Downloader\Bing Downloader\obj\Debug\Bing_Downloader.formBing.resources
+G:\Backup\Backup\Backup\Vitor Hugo\CSharp14\Bing Downloader\Bing Downloader\obj\Debug\Bing_Downloader.Properties.Resources.resources
+G:\Backup\Backup\Backup\Vitor Hugo\CSharp14\Bing Downloader\Bing Downloader\obj\Debug\Bing Downloader.csproj.GenerateResource.Cache
+G:\Backup\Backup\Backup\Vitor Hugo\CSharp14\Bing Downloader\Bing Downloader\obj\Debug\Bing Downloader.exe
+G:\Backup\Backup\Backup\Vitor Hugo\CSharp14\Bing Downloader\Bing Downloader\obj\Debug\Bing Downloader.pdb
