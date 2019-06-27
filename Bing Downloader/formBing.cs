@@ -164,7 +164,21 @@ namespace Bing_Downloader
 			this.Cursor = Cursors.WaitCursor;
 			using (WebClient cliente = new WebClient())
 			{
-				cliente.DownloadFile(dgvImagens.Rows[i].Cells[dgcUrl.Index].Value.ToString(), vNomeArquivo[i].ToString());
+				if (File.Exists(vNomeArquivo[i].ToString()))
+				{
+					if (MessageBox.Show("CONFIRMA A SUBSTITUIÇÃO DO ARQUIVO [" + vNomeArquivo[i].ToString() + "] ?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+					{
+						cliente.DownloadFile(dgvImagens.Rows[i].Cells[dgcUrl.Index].Value.ToString(), vNomeArquivo[i].ToString());
+					}
+					else
+					{
+						MessageBox.Show("ARQUIVO IGNORADO.");
+					}
+				}
+				else
+				{
+					cliente.DownloadFile(dgvImagens.Rows[i].Cells[dgcUrl.Index].Value.ToString(), vNomeArquivo[i].ToString());
+				}
 			}
 			this.Cursor = Cursors.Default;
 		}
