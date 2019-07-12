@@ -158,13 +158,34 @@ namespace Bing_Downloader
 				cmdSalvar8.Enabled = true;
 			}
 		}
-		
+
 		private void salvarImagem(int i)
 		{
 			this.Cursor = Cursors.WaitCursor;
 			using (WebClient cliente = new WebClient())
 			{
-				if (File.Exists(vNomeArquivo[i].ToString()))
+				bool existe = false;
+				string filepath = Path.GetDirectoryName(AppDomain.CurrentDomain.BaseDirectory.ToString());
+				DirectoryInfo d = new DirectoryInfo(filepath);
+				foreach (FileInfo file in d.GetFiles("*.jpg"))
+				{
+					string path = Path.GetFileNameWithoutExtension(file.FullName);
+					int j = path.IndexOf('_');
+					string path2 = path.Substring(0, j);
+					int k = vNomeArquivo[i].ToString().IndexOf(path2);
+					if (k == -1)
+					{
+						existe = false;
+					}
+					else
+					{
+						existe = true;
+						break;
+					}
+					//MessageBox.Show(path + "\r\n" + path2);
+				}
+				//if (File.Exists(vNomeArquivo[i].ToString()))
+				if (existe == true)
 				{
 					if (MessageBox.Show("CONFIRMA A SUBSTITUIÇÃO DO ARQUIVO [" + vNomeArquivo[i].ToString() + "] ?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
 					{

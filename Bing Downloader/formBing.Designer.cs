@@ -460,7 +460,7 @@
 			this.lblCopyright.Name = "lblCopyright";
 			this.lblCopyright.Size = new System.Drawing.Size(955, 12);
 			this.lblCopyright.TabIndex = 12;
-			this.lblCopyright.Text = "COPYRIGHT © 2018 BY VITOR HUGO FALCÃO MONTAN";
+			this.lblCopyright.Text = "COPYRIGHT © 2019 BY VITOR HUGO FALCÃO MONTAN";
 			this.lblCopyright.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// grbIdioma
