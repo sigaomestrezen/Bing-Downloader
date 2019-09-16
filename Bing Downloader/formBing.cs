@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using System.Net;
 using System.IO;
@@ -20,7 +15,6 @@ namespace Bing_Downloader
 		ArrayList vDesc = new ArrayList();
 		string url;
 		int idx;
-		//string nomeArquivo;
 
 		public formBing()
 		{
@@ -62,6 +56,7 @@ namespace Bing_Downloader
 			pcbBackground6.Load(dgvImagens.Rows[5].Cells[dgcUrl.Index].Value.ToString());
 			Application.DoEvents();
 		}
+
 		private void carregarImagem7()
 		{
 			pcbBackground7.Load(dgvImagens.Rows[6].Cells[dgcUrl.Index].Value.ToString());
@@ -71,6 +66,48 @@ namespace Bing_Downloader
 		private void carregarImagem8()
 		{
 			pcbBackground8.Load(dgvImagens.Rows[7].Cells[dgcUrl.Index].Value.ToString());
+			Application.DoEvents();
+		}
+
+		private void carregarImagem9()
+		{
+			pcbBackground9.Load(dgvImagens.Rows[9].Cells[dgcUrl.Index].Value.ToString());
+			Application.DoEvents();
+		}
+
+		private void carregarImagem10()
+		{
+			pcbBackground10.Load(dgvImagens.Rows[10].Cells[dgcUrl.Index].Value.ToString());
+			Application.DoEvents();
+		}
+
+		private void carregarImagem11()
+		{
+			pcbBackground11.Load(dgvImagens.Rows[11].Cells[dgcUrl.Index].Value.ToString());
+			Application.DoEvents();
+		}
+
+		private void carregarImagem12()
+		{
+			pcbBackground12.Load(dgvImagens.Rows[12].Cells[dgcUrl.Index].Value.ToString());
+			Application.DoEvents();
+		}
+
+		private void carregarImagem13()
+		{
+			pcbBackground13.Load(dgvImagens.Rows[13].Cells[dgcUrl.Index].Value.ToString());
+			Application.DoEvents();
+		}
+
+		private void carregarImagem14()
+		{
+			pcbBackground14.Load(dgvImagens.Rows[14].Cells[dgcUrl.Index].Value.ToString());
+			Application.DoEvents();
+		}
+
+		private void carregarImagem15()
+		{
+			pcbBackground15.Load(dgvImagens.Rows[15].Cells[dgcUrl.Index].Value.ToString());
 			Application.DoEvents();
 		}
 
@@ -84,10 +121,6 @@ namespace Bing_Downloader
 			string nomeFim = "</urlBase>";
 			string descInicio = "<copyright>";
 			string descFim = "</copyright>";
-			string vDataItem = "";
-			string vURL = "";
-			string vNome = "";
-			string vDescItem = "";
 			int k = 0;
 			for (int i = 0; i <= rtbSource.Lines.Count() - 1; i++)
 			{
@@ -95,7 +128,7 @@ namespace Bing_Downloader
 				{
 					if (rtbSource.Lines[i].Contains(dataInicio))
 					{
-						vDataItem = rtbSource.Lines[i].Substring(11, rtbSource.Lines[i].Length - 23);
+						string vDataItem = rtbSource.Lines[i].Substring(11, rtbSource.Lines[i].Length - 23);
 						vDataItem = vDataItem.Substring(6, 2) + "/" + vDataItem.Substring(4, 2) + "/" + vDataItem.Substring(0, 4);
 						dgvImagens.Rows.Add(vDataItem);
 						vData.Add(vDataItem);
@@ -105,7 +138,7 @@ namespace Bing_Downloader
 				{
 					if (rtbSource.Lines[i].Contains(urlInicio))
 					{
-						vURL = "http://www.bing.com" + rtbSource.Lines[i].Substring(5, rtbSource.Lines[i].Length - 11);
+						string vURL = "http://www.bing.com" + rtbSource.Lines[i].Substring(5, rtbSource.Lines[i].Length - 11);
 						dgvImagens.Rows[k].Cells[dgcUrl.Index].Value = vURL;
 					}
 				}
@@ -113,7 +146,7 @@ namespace Bing_Downloader
 				{
 					if (rtbSource.Lines[i].Contains(nomeInicio))
 					{
-						vNome = rtbSource.Lines[i].Substring(20, rtbSource.Lines[i].Length - 30) + "_1920x1080.jpg";
+						string vNome = rtbSource.Lines[i].Substring(20, rtbSource.Lines[i].Length - 30) + "_" + cboDimensoes.Text + ".jpg";
 						//idx = vURL.LastIndexOf("/") + 1;
 						//nomeArquivo = @vURL.Substring(idx, vURL.Length - idx);
 						vNomeArquivo.Add(vNome);
@@ -123,7 +156,7 @@ namespace Bing_Downloader
 				{
 					if (rtbSource.Lines[i].Contains(descInicio))
 					{
-						vDescItem = rtbSource.Lines[i].Substring(11, rtbSource.Lines[i].Length - 23);
+						string vDescItem = rtbSource.Lines[i].Substring(11, rtbSource.Lines[i].Length - 23);
 						dgvImagens.Rows[k].Cells[dgcDesc.Index].Value = vDesc;
 						vDesc.Add(vDescItem);
 						k++;
@@ -145,6 +178,13 @@ namespace Bing_Downloader
 				cmdSalvar6.Enabled = false;
 				cmdSalvar7.Enabled = false;
 				cmdSalvar8.Enabled = false;
+				cmdSalvar9.Enabled = false;
+				cmdSalvar10.Enabled = false;
+				cmdSalvar11.Enabled = false;
+				cmdSalvar12.Enabled = false;
+				cmdSalvar13.Enabled = false;
+				cmdSalvar14.Enabled = false;
+				cmdSalvar15.Enabled = false;
 			}
 			else
 			{
@@ -156,6 +196,13 @@ namespace Bing_Downloader
 				cmdSalvar6.Enabled = true;
 				cmdSalvar7.Enabled = true;
 				cmdSalvar8.Enabled = true;
+				cmdSalvar9.Enabled = true;
+				cmdSalvar10.Enabled = true;
+				cmdSalvar11.Enabled = true;
+				cmdSalvar12.Enabled = true;
+				cmdSalvar13.Enabled = true;
+				cmdSalvar14.Enabled = true;
+				cmdSalvar15.Enabled = true;
 			}
 		}
 
@@ -182,12 +229,10 @@ namespace Bing_Downloader
 						existe = true;
 						break;
 					}
-					//MessageBox.Show(path + "\r\n" + path2);
 				}
-				//if (File.Exists(vNomeArquivo[i].ToString()))
 				if (existe == true)
 				{
-					if (MessageBox.Show("CONFIRMA A SUBSTITUIÇÃO DO ARQUIVO [" + vNomeArquivo[i].ToString() + "] ?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+					if (MessageBox.Show("FOI ENCONTRADA A MESMA IMAGEM OU SIMILAR." + (char)13 + "CONFIRMA A SUBSTITUIÇÃO DO ARQUIVO [" + vNomeArquivo[i].ToString() + "] ?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
 					{
 						cliente.DownloadFile(dgvImagens.Rows[i].Cells[dgcUrl.Index].Value.ToString(), vNomeArquivo[i].ToString());
 					}
@@ -207,6 +252,106 @@ namespace Bing_Downloader
 		private void formBing_Load(object sender, EventArgs e)
 		{
 			rdbIdioma2_CheckedChanged(null, null);
+			cboDimensoes_Click(null, null);
+		}
+
+		private void cboDimensoes_Click(object sender, EventArgs e)
+		{
+			int i = cboDimensoes.SelectedIndex;
+			if (cboDimensoes.SelectedIndex == -1) i = 14;
+			cboDimensoes.Items.Clear();
+			cboDimensoes.Items.Add("150x150");
+			cboDimensoes.Items.Add("240x320");
+			cboDimensoes.Items.Add("320x240");
+			cboDimensoes.Items.Add("480x640");
+			cboDimensoes.Items.Add("480x800");
+			cboDimensoes.Items.Add("640x480");
+			cboDimensoes.Items.Add("720x1280");
+			cboDimensoes.Items.Add("800x480");
+			cboDimensoes.Items.Add("800x600");
+			cboDimensoes.Items.Add("1024x768");
+			cboDimensoes.Items.Add("1080x1920");
+			cboDimensoes.Items.Add("1280x720");
+			cboDimensoes.Items.Add("1366x768");
+			cboDimensoes.Items.Add("1600x900");
+			cboDimensoes.Items.Add("1920x1080");
+			cboDimensoes.Items.Add("1920x1200");
+			cboDimensoes.SelectedIndex = i;
+		}
+
+		private void cmdSalvar1_Click(object sender, EventArgs e)
+		{
+			salvarImagem(0);
+		}
+
+		private void cmdSalvar2_Click(object sender, EventArgs e)
+		{
+			salvarImagem(1);
+		}
+
+		private void cmdSalvar3_Click(object sender, EventArgs e)
+		{
+			salvarImagem(2);
+		}
+
+		private void cmdSalvar4_Click(object sender, EventArgs e)
+		{
+			salvarImagem(3);
+		}
+
+		private void cmdSalvar5_Click(object sender, EventArgs e)
+		{
+			salvarImagem(4);
+		}
+
+		private void cmdSalvar6_Click(object sender, EventArgs e)
+		{
+			salvarImagem(5);
+		}
+
+		private void cmdSalvar7_Click(object sender, EventArgs e)
+		{
+			salvarImagem(6);
+		}
+
+		private void cmdSalvar8_Click(object sender, EventArgs e)
+		{
+			salvarImagem(7);
+		}
+
+		private void cmdSalvar9_Click(object sender, EventArgs e)
+		{
+			salvarImagem(9);
+		}
+
+		private void cmdSalvar10_Click(object sender, EventArgs e)
+		{
+			salvarImagem(10);
+		}
+
+		private void cmdSalvar11_Click(object sender, EventArgs e)
+		{
+			salvarImagem(11);
+		}
+
+		private void cmdSalvar12_Click(object sender, EventArgs e)
+		{
+			salvarImagem(12);
+		}
+
+		private void cmdSalvar13_Click(object sender, EventArgs e)
+		{
+			salvarImagem(13);
+		}
+
+		private void cmdSalvar14_Click(object sender, EventArgs e)
+		{
+			salvarImagem(14);
+		}
+
+		private void cmdSalvar15_Click(object sender, EventArgs e)
+		{
+			salvarImagem(15);
 		}
 
 		private void lstPaises_SelectedIndexChanged(object sender, EventArgs e)
@@ -216,21 +361,20 @@ namespace Bing_Downloader
 			rtbSource.Text = "";
 			dgvImagens.Rows.Clear();
 			pcbBackground1.Image = null;
-			chkImg1.Checked = false;
 			pcbBackground2.Image = null;
-			chkImg2.Checked = false;
 			pcbBackground3.Image = null;
-			chkImg3.Checked = false;
 			pcbBackground4.Image = null;
-			chkImg4.Checked = false;
 			pcbBackground5.Image = null;
-			chkImg5.Checked = false;
 			pcbBackground6.Image = null;
-			chkImg6.Checked = false;
 			pcbBackground7.Image = null;
-			chkImg7.Checked = false;
 			pcbBackground8.Image = null;
-			chkImg8.Checked = false;
+			pcbBackground9.Image = null;
+			pcbBackground10.Image = null;
+			pcbBackground11.Image = null;
+			pcbBackground12.Image = null;
+			pcbBackground13.Image = null;
+			pcbBackground14.Image = null;
+			pcbBackground15.Image = null;
 			vData.Clear();
 			vNomeArquivo.Clear();
 			vDesc.Clear();
@@ -360,9 +504,20 @@ namespace Bing_Downloader
 				streamDados.Close();
 				resposta.Close();
 			}
-			rtbSource.Text = rtbSource.Text.Replace("_1366x768", "_1920x1080").Replace("><", ">" + (char)13 + "<");
+			url = "http://www.bing.com/HPImageArchive.aspx?format=xml&idx=8&n=8&mkt=" + codigo_pais;
+			requisicaoWeb = WebRequest.Create(url);
+			requisicaoWeb.Method = "GET";
+			using (var resposta = requisicaoWeb.GetResponse())
+			{
+				var streamDados = resposta.GetResponseStream();
+				StreamReader reader = new StreamReader(streamDados);
+				object objResponse = reader.ReadToEnd();
+				rtbSource.Text += objResponse.ToString();
+				streamDados.Close();
+				resposta.Close();
+			}
+			rtbSource.Text = rtbSource.Text.Replace("_1920x1080", "_" + cboDimensoes.Text).Replace("><", ">" + (char)13 + "<");
 			filtrarDados();
-			//carregarImagens();
 			Thread th1 = new Thread(carregarImagem1);
 			Thread th2 = new Thread(carregarImagem2);
 			Thread th3 = new Thread(carregarImagem3);
@@ -371,6 +526,13 @@ namespace Bing_Downloader
 			Thread th6 = new Thread(carregarImagem6);
 			Thread th7 = new Thread(carregarImagem7);
 			Thread th8 = new Thread(carregarImagem8);
+			Thread th9 = new Thread(carregarImagem9);
+			Thread th10 = new Thread(carregarImagem10);
+			Thread th11 = new Thread(carregarImagem11);
+			Thread th12 = new Thread(carregarImagem12);
+			Thread th13 = new Thread(carregarImagem13);
+			Thread th14 = new Thread(carregarImagem14);
+			Thread th15 = new Thread(carregarImagem15);
 			th1.Start();
 			th2.Start();
 			th3.Start();
@@ -379,56 +541,180 @@ namespace Bing_Downloader
 			th6.Start();
 			th7.Start();
 			th8.Start();
-			ttpInfo.SetToolTip(pcbBackground1, vData[0].ToString() + (char)13 + "[ " + vNomeArquivo[0].ToString() + " ]" + (char)13 + vDesc[0].ToString());
-			ttpInfo.SetToolTip(pcbBackground2, vData[1].ToString() + (char)13 + "[ " + vNomeArquivo[1].ToString() + " ]" + (char)13 + vDesc[1].ToString());
-			ttpInfo.SetToolTip(pcbBackground3, vData[2].ToString() + (char)13 + "[ " + vNomeArquivo[2].ToString() + " ]" + (char)13 + vDesc[2].ToString());
-			ttpInfo.SetToolTip(pcbBackground4, vData[3].ToString() + (char)13 + "[ " + vNomeArquivo[3].ToString() + " ]" + (char)13 + vDesc[3].ToString());
-			ttpInfo.SetToolTip(pcbBackground5, vData[4].ToString() + (char)13 + "[ " + vNomeArquivo[4].ToString() + " ]" + (char)13 + vDesc[4].ToString());
-			ttpInfo.SetToolTip(pcbBackground6, vData[5].ToString() + (char)13 + "[ " + vNomeArquivo[5].ToString() + " ]" + (char)13 + vDesc[5].ToString());
-			ttpInfo.SetToolTip(pcbBackground7, vData[6].ToString() + (char)13 + "[ " + vNomeArquivo[6].ToString() + " ]" + (char)13 + vDesc[6].ToString());
-			ttpInfo.SetToolTip(pcbBackground8, vData[7].ToString() + (char)13 + "[ " + vNomeArquivo[7].ToString() + " ]" + (char)13 + vDesc[7].ToString());
+			th9.Start();
+			th10.Start();
+			th11.Start();
+			th12.Start();
+			th13.Start();
+			th14.Start();
+			th15.Start();
+			ttpInfo.SetToolTip(pcbBackground1, vData[0].ToString() + (char)13 + "[ " + vNomeArquivo[0].ToString() + " ]" + (char)13 + vDesc[0].ToString() + (char)13 + "[ CLIQUE PARA AMPLIAR ]");
+			ttpInfo.SetToolTip(pcbBackground2, vData[1].ToString() + (char)13 + "[ " + vNomeArquivo[1].ToString() + " ]" + (char)13 + vDesc[1].ToString() + (char)13 + "[ CLIQUE PARA AMPLIAR ]");
+			ttpInfo.SetToolTip(pcbBackground3, vData[2].ToString() + (char)13 + "[ " + vNomeArquivo[2].ToString() + " ]" + (char)13 + vDesc[2].ToString() + (char)13 + "[ CLIQUE PARA AMPLIAR ]");
+			ttpInfo.SetToolTip(pcbBackground4, vData[3].ToString() + (char)13 + "[ " + vNomeArquivo[3].ToString() + " ]" + (char)13 + vDesc[3].ToString() + (char)13 + "[ CLIQUE PARA AMPLIAR ]");
+			ttpInfo.SetToolTip(pcbBackground5, vData[4].ToString() + (char)13 + "[ " + vNomeArquivo[4].ToString() + " ]" + (char)13 + vDesc[4].ToString() + (char)13 + "[ CLIQUE PARA AMPLIAR ]");
+			ttpInfo.SetToolTip(pcbBackground6, vData[5].ToString() + (char)13 + "[ " + vNomeArquivo[5].ToString() + " ]" + (char)13 + vDesc[5].ToString() + (char)13 + "[ CLIQUE PARA AMPLIAR ]");
+			ttpInfo.SetToolTip(pcbBackground7, vData[6].ToString() + (char)13 + "[ " + vNomeArquivo[6].ToString() + " ]" + (char)13 + vDesc[6].ToString() + (char)13 + "[ CLIQUE PARA AMPLIAR ]");
+			ttpInfo.SetToolTip(pcbBackground8, vData[7].ToString() + (char)13 + "[ " + vNomeArquivo[7].ToString() + " ]" + (char)13 + vDesc[7].ToString() + (char)13 + "[ CLIQUE PARA AMPLIAR ]");
+			ttpInfo.SetToolTip(pcbBackground9, vData[9].ToString() + (char)13 + "[ " + vNomeArquivo[9].ToString() + " ]" + (char)13 + vDesc[9].ToString() + (char)13 + "[ CLIQUE PARA AMPLIAR ]");
+			ttpInfo.SetToolTip(pcbBackground10, vData[10].ToString() + (char)13 + "[ " + vNomeArquivo[10].ToString() + " ]" + (char)13 + vDesc[10].ToString() + (char)13 + "[ CLIQUE PARA AMPLIAR ]");
+			ttpInfo.SetToolTip(pcbBackground11, vData[11].ToString() + (char)13 + "[ " + vNomeArquivo[11].ToString() + " ]" + (char)13 + vDesc[11].ToString() + (char)13 + "[ CLIQUE PARA AMPLIAR ]");
+			ttpInfo.SetToolTip(pcbBackground12, vData[12].ToString() + (char)13 + "[ " + vNomeArquivo[12].ToString() + " ]" + (char)13 + vDesc[12].ToString() + (char)13 + "[ CLIQUE PARA AMPLIAR ]");
+			ttpInfo.SetToolTip(pcbBackground13, vData[13].ToString() + (char)13 + "[ " + vNomeArquivo[13].ToString() + " ]" + (char)13 + vDesc[13].ToString() + (char)13 + "[ CLIQUE PARA AMPLIAR ]");
+			ttpInfo.SetToolTip(pcbBackground14, vData[14].ToString() + (char)13 + "[ " + vNomeArquivo[14].ToString() + " ]" + (char)13 + vDesc[14].ToString() + (char)13 + "[ CLIQUE PARA AMPLIAR ]");
+			ttpInfo.SetToolTip(pcbBackground15, vData[15].ToString() + (char)13 + "[ " + vNomeArquivo[15].ToString() + " ]" + (char)13 + vDesc[15].ToString() + (char)13 + "[ CLIQUE PARA AMPLIAR ]");
 			habilitarBotoes();
 			this.Cursor = Cursors.Default;
 		}
 
-		private void cmdSalvar1_Click(object sender, EventArgs e)
+		private void pcbBackground1_Click(object sender, EventArgs e)
 		{
-			salvarImagem(0);
+			if (pcbBackground1.Image == null) return;
+			formPreview f = new formPreview();
+			f.Text = vNomeArquivo[0].ToString();
+			f.pcbOriginal.Image = pcbBackground1.Image;
+			f.pcbPreview.Image = pcbBackground1.Image;
+			f.Show();
 		}
 
-		private void cmdSalvar2_Click(object sender, EventArgs e)
+		private void pcbBackground2_Click(object sender, EventArgs e)
 		{
-			salvarImagem(1);
+			if (pcbBackground2.Image == null) return;
+			formPreview f = new formPreview();
+			f.Text = vNomeArquivo[1].ToString();
+			f.pcbOriginal.Image = pcbBackground2.Image;
+			f.pcbPreview.Image = pcbBackground2.Image;
+			f.Show();
 		}
 
-		private void cmdSalvar3_Click(object sender, EventArgs e)
+		private void pcbBackground3_Click(object sender, EventArgs e)
 		{
-			salvarImagem(2);
+			if (pcbBackground3.Image == null) return;
+			formPreview f = new formPreview();
+			f.Text = vNomeArquivo[2].ToString();
+			f.pcbOriginal.Image = pcbBackground3.Image;
+			f.pcbPreview.Image = pcbBackground3.Image;
+			f.Show();
 		}
 
-		private void cmdSalvar4_Click(object sender, EventArgs e)
+		private void pcbBackground4_Click(object sender, EventArgs e)
 		{
-			salvarImagem(3);
+			if (pcbBackground4.Image == null) return;
+			formPreview f = new formPreview();
+			f.Text = vNomeArquivo[3].ToString();
+			f.pcbOriginal.Image = pcbBackground4.Image;
+			f.pcbPreview.Image = pcbBackground4.Image;
+			f.Show();
 		}
 
-		private void cmdSalvar5_Click(object sender, EventArgs e)
+		private void pcbBackground5_Click(object sender, EventArgs e)
 		{
-			salvarImagem(4);
+			if (pcbBackground5.Image == null) return;
+			formPreview f = new formPreview();
+			f.Text = vNomeArquivo[4].ToString();
+			f.pcbOriginal.Image = pcbBackground5.Image;
+			f.pcbPreview.Image = pcbBackground5.Image;
+			f.Show();
 		}
 
-		private void cmdSalvar6_Click(object sender, EventArgs e)
+		private void pcbBackground6_Click(object sender, EventArgs e)
 		{
-			salvarImagem(5);
+			if (pcbBackground6.Image == null) return;
+			formPreview f = new formPreview();
+			f.Text = vNomeArquivo[5].ToString();
+			f.pcbOriginal.Image = pcbBackground6.Image;
+			f.pcbPreview.Image = pcbBackground6.Image;
+			f.Show();
 		}
 
-		private void cmdSalvar7_Click(object sender, EventArgs e)
+		private void pcbBackground7_Click(object sender, EventArgs e)
 		{
-			salvarImagem(6);
+			if (pcbBackground7.Image == null) return;
+			formPreview f = new formPreview();
+			f.Text = vNomeArquivo[6].ToString();
+			f.pcbOriginal.Image = pcbBackground7.Image;
+			f.pcbPreview.Image = pcbBackground7.Image;
+			f.Show();
 		}
 
-		private void cmdSalvar8_Click(object sender, EventArgs e)
+		private void pcbBackground8_Click(object sender, EventArgs e)
 		{
-			salvarImagem(7);
+			if (pcbBackground8.Image == null) return;
+			formPreview f = new formPreview();
+			f.Text = vNomeArquivo[7].ToString();
+			f.pcbOriginal.Image = pcbBackground8.Image;
+			f.pcbPreview.Image = pcbBackground8.Image;
+			f.Show();
+		}
+
+		private void pcbBackground9_Click(object sender, EventArgs e)
+		{
+			if (pcbBackground9.Image == null) return;
+			formPreview f = new formPreview();
+			f.Text = vNomeArquivo[9].ToString();
+			f.pcbOriginal.Image = pcbBackground9.Image;
+			f.pcbPreview.Image = pcbBackground9.Image;
+			f.Show();
+		}
+
+		private void pcbBackground10_Click(object sender, EventArgs e)
+		{
+			if (pcbBackground10.Image == null) return;
+			formPreview f = new formPreview();
+			f.Text = vNomeArquivo[10].ToString();
+			f.pcbOriginal.Image = pcbBackground10.Image;
+			f.pcbPreview.Image = pcbBackground10.Image;
+			f.Show();
+		}
+
+		private void pcbBackground11_Click(object sender, EventArgs e)
+		{
+			if (pcbBackground11.Image == null) return;
+			formPreview f = new formPreview();
+			f.Text = vNomeArquivo[11].ToString();
+			f.pcbOriginal.Image = pcbBackground11.Image;
+			f.pcbPreview.Image = pcbBackground11.Image;
+			f.Show();
+		}
+
+		private void pcbBackground12_Click(object sender, EventArgs e)
+		{
+			if (pcbBackground12.Image == null) return;
+			formPreview f = new formPreview();
+			f.Text = vNomeArquivo[12].ToString();
+			f.pcbOriginal.Image = pcbBackground12.Image;
+			f.pcbPreview.Image = pcbBackground12.Image;
+			f.Show();
+		}
+
+		private void pcbBackground13_Click(object sender, EventArgs e)
+		{
+			if (pcbBackground13.Image == null) return;
+			formPreview f = new formPreview();
+			f.Text = vNomeArquivo[13].ToString();
+			f.pcbOriginal.Image = pcbBackground13.Image;
+			f.pcbPreview.Image = pcbBackground13.Image;
+			f.Show();
+		}
+
+		private void pcbBackground14_Click(object sender, EventArgs e)
+		{
+			if (pcbBackground14.Image == null) return;
+			formPreview f = new formPreview();
+			f.Text = vNomeArquivo[14].ToString();
+			f.pcbOriginal.Image = pcbBackground14.Image;
+			f.pcbPreview.Image = pcbBackground14.Image;
+			f.Show();
+		}
+
+		private void pcbBackground15_Click(object sender, EventArgs e)
+		{
+			if (pcbBackground15.Image == null) return;
+			formPreview f = new formPreview();
+			f.Text = vNomeArquivo[15].ToString();
+			f.pcbOriginal.Image = pcbBackground15.Image;
+			f.pcbPreview.Image = pcbBackground15.Image;
+			f.Show();
 		}
 
 		private void rdbIdioma1_CheckedChanged(object sender, EventArgs e)
@@ -469,6 +755,7 @@ namespace Bing_Downloader
 			lstPaises.Items.Add("Suíça - Francês");
 			lstPaises.Items.Add("Taiwan");
 			lstPaises.Items.Add("Turquia");
+			grbDimensoes.Text = " DIMENSÕES DA IMAGEM ";
 			grbIdioma.Text = " IDIOMA ";
 			rdbIdioma1.Text = "&Português";
 			rdbIdioma2.Text = "&Inglês";
@@ -481,15 +768,13 @@ namespace Bing_Downloader
 			cmdSalvar6.Text = "&Salvar";
 			cmdSalvar7.Text = "&Salvar";
 			cmdSalvar8.Text = "&Salvar";
-			grbStatus.Text = " STATUS ";
-			chkImg1.Text = "Imagem 1";
-			chkImg2.Text = "Imagem 2";
-			chkImg3.Text = "Imagem 3";
-			chkImg4.Text = "Imagem 4";
-			chkImg5.Text = "Imagem 5";
-			chkImg6.Text = "Imagem 6";
-			chkImg7.Text = "Imagem 7";
-			chkImg8.Text = "Imagem 8";
+			cmdSalvar9.Text = "&Salvar";
+			cmdSalvar10.Text = "&Salvar";
+			cmdSalvar11.Text = "&Salvar";
+			cmdSalvar12.Text = "&Salvar";
+			cmdSalvar13.Text = "&Salvar";
+			cmdSalvar14.Text = "&Salvar";
+			cmdSalvar15.Text = "&Salvar";
 		}
 
 		private void rdbIdioma2_CheckedChanged(object sender, EventArgs e)
@@ -530,6 +815,7 @@ namespace Bing_Downloader
 			lstPaises.Items.Add("Switzerland - French");
 			lstPaises.Items.Add("Taiwan");
 			lstPaises.Items.Add("Turkey");
+			grbDimensoes.Text = " PICTURE DIMENSIONS ";
 			grbIdioma.Text = " LANGUAGE ";
 			rdbIdioma1.Text = "&Portuguese";
 			rdbIdioma2.Text = "&English";
@@ -542,15 +828,13 @@ namespace Bing_Downloader
 			cmdSalvar6.Text = "&Save";
 			cmdSalvar7.Text = "&Save";
 			cmdSalvar8.Text = "&Save";
-			grbStatus.Text = " STATUS ";
-			chkImg1.Text = "Picture 1";
-			chkImg2.Text = "Picture 2";
-			chkImg3.Text = "Picture 3";
-			chkImg4.Text = "Picture 4";
-			chkImg5.Text = "Picture 5";
-			chkImg6.Text = "Picture 6";
-			chkImg7.Text = "Picture 7";
-			chkImg8.Text = "Picture 8";
+			cmdSalvar9.Text = "&Save";
+			cmdSalvar10.Text = "&Save";
+			cmdSalvar11.Text = "&Save";
+			cmdSalvar12.Text = "&Save";
+			cmdSalvar13.Text = "&Save";
+			cmdSalvar14.Text = "&Save";
+			cmdSalvar15.Text = "&Save";
 		}
 
 		private void rdbIdioma3_CheckedChanged(object sender, EventArgs e)
@@ -591,6 +875,7 @@ namespace Bing_Downloader
 			lstPaises.Items.Add("Suiza - Francés");
 			lstPaises.Items.Add("Taiwán");
 			lstPaises.Items.Add("Turquía");
+			grbDimensoes.Text = " DIMENSIONES DE IMAGEN ";
 			grbIdioma.Text = " IDIOMA ";
 			rdbIdioma1.Text = "&Portugués";
 			rdbIdioma2.Text = "&Inglés";
@@ -603,27 +888,32 @@ namespace Bing_Downloader
 			cmdSalvar6.Text = "&Guardar";
 			cmdSalvar7.Text = "&Guardar";
 			cmdSalvar8.Text = "&Guardar";
-			grbStatus.Text = " ESTATUS ";
-			chkImg1.Text = "Imagen 1";
-			chkImg2.Text = "Imagen 2";
-			chkImg3.Text = "Imagen 3";
-			chkImg4.Text = "Imagen 4";
-			chkImg5.Text = "Imagen 5";
-			chkImg6.Text = "Imagen 6";
-			chkImg7.Text = "Imagen 7";
-			chkImg8.Text = "Imagen 8";
+			cmdSalvar9.Text = "&Guardar";
+			cmdSalvar10.Text = "&Guardar";
+			cmdSalvar11.Text = "&Guardar";
+			cmdSalvar12.Text = "&Guardar";
+			cmdSalvar13.Text = "&Guardar";
+			cmdSalvar14.Text = "&Guardar";
+			cmdSalvar15.Text = "&Guardar";
 		}
 
 		private void timer1_Tick(object sender, EventArgs e)
 		{
-			if (pcbBackground1.Image == null) chkImg1.Checked = false; else chkImg1.Checked = true;
-			if (pcbBackground2.Image == null) chkImg2.Checked = false; else chkImg2.Checked = true;
-			if (pcbBackground3.Image == null) chkImg3.Checked = false; else chkImg3.Checked = true;
-			if (pcbBackground4.Image == null) chkImg4.Checked = false; else chkImg4.Checked = true;
-			if (pcbBackground5.Image == null) chkImg5.Checked = false; else chkImg5.Checked = true;
-			if (pcbBackground6.Image == null) chkImg6.Checked = false; else chkImg6.Checked = true;
-			if (pcbBackground7.Image == null) chkImg7.Checked = false; else chkImg7.Checked = true;
-			if (pcbBackground8.Image == null) chkImg8.Checked = false; else chkImg8.Checked = true;
+			if (pcbBackground1.Image == null) cmdSalvar1.Enabled = false; else cmdSalvar1.Enabled = true;
+			if (pcbBackground2.Image == null) cmdSalvar2.Enabled = false; else cmdSalvar2.Enabled = true;
+			if (pcbBackground3.Image == null) cmdSalvar3.Enabled = false; else cmdSalvar3.Enabled = true;
+			if (pcbBackground4.Image == null) cmdSalvar4.Enabled = false; else cmdSalvar4.Enabled = true;
+			if (pcbBackground5.Image == null) cmdSalvar5.Enabled = false; else cmdSalvar5.Enabled = true;
+			if (pcbBackground6.Image == null) cmdSalvar6.Enabled = false; else cmdSalvar6.Enabled = true;
+			if (pcbBackground7.Image == null) cmdSalvar7.Enabled = false; else cmdSalvar7.Enabled = true;
+			if (pcbBackground8.Image == null) cmdSalvar8.Enabled = false; else cmdSalvar8.Enabled = true;
+			if (pcbBackground9.Image == null) cmdSalvar9.Enabled = false; else cmdSalvar9.Enabled = true;
+			if (pcbBackground10.Image == null) cmdSalvar10.Enabled = false; else cmdSalvar10.Enabled = true;
+			if (pcbBackground11.Image == null) cmdSalvar11.Enabled = false; else cmdSalvar11.Enabled = true;
+			if (pcbBackground12.Image == null) cmdSalvar12.Enabled = false; else cmdSalvar12.Enabled = true;
+			if (pcbBackground13.Image == null) cmdSalvar13.Enabled = false; else cmdSalvar13.Enabled = true;
+			if (pcbBackground14.Image == null) cmdSalvar14.Enabled = false; else cmdSalvar14.Enabled = true;
+			if (pcbBackground15.Image == null) cmdSalvar15.Enabled = false; else cmdSalvar15.Enabled = true;
 		}
 	}
 }

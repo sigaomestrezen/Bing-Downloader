@@ -7,16 +7,17 @@ C:\Vitor Hugo\CSharp14\Bing Downloader\Bing Downloader\obj\Debug\Bing Downloader
 C:\Vitor Hugo\CSharp14\Bing Downloader\Bing Downloader\obj\Debug\Bing Downloader.pdb
 G:\Backup\Backup\Backup\Vitor Hugo\CSharp14\Bing Downloader\Bing Downloader\bin\Debug\Bing Downloader.exe
 G:\Backup\Backup\Backup\Vitor Hugo\CSharp14\Bing Downloader\Bing Downloader\bin\Debug\Bing Downloader.pdb
-G:\Backup\Backup\Backup\Vitor Hugo\CSharp14\Bing Downloader\Bing Downloader\obj\Debug\Bing Downloader.csprojResolveAssemblyReference.cache
 G:\Backup\Backup\Backup\Vitor Hugo\CSharp14\Bing Downloader\Bing Downloader\obj\Debug\Bing_Downloader.formBing.resources
 G:\Backup\Backup\Backup\Vitor Hugo\CSharp14\Bing Downloader\Bing Downloader\obj\Debug\Bing_Downloader.Properties.Resources.resources
-G:\Backup\Backup\Backup\Vitor Hugo\CSharp14\Bing Downloader\Bing Downloader\obj\Debug\Bing Downloader.csproj.GenerateResource.Cache
+G:\Backup\Backup\Backup\Vitor Hugo\CSharp14\Bing Downloader\Bing Downloader\obj\Debug\Bing Downloader.csproj.GenerateResource.cache
+G:\Backup\Backup\Backup\Vitor Hugo\CSharp14\Bing Downloader\Bing Downloader\obj\Debug\Bing Downloader.csproj.CoreCompileInputs.cache
 G:\Backup\Backup\Backup\Vitor Hugo\CSharp14\Bing Downloader\Bing Downloader\obj\Debug\Bing Downloader.exe
 G:\Backup\Backup\Backup\Vitor Hugo\CSharp14\Bing Downloader\Bing Downloader\obj\Debug\Bing Downloader.pdb
+C:\Users\INFONEW\Downloads\BingDownloader\Bing Downloader\bin\Debug\Bing Downloader.exe.config
 C:\Users\INFONEW\Downloads\BingDownloader\Bing Downloader\bin\Debug\Bing Downloader.exe
 C:\Users\INFONEW\Downloads\BingDownloader\Bing Downloader\bin\Debug\Bing Downloader.pdb
-C:\Users\INFONEW\Downloads\BingDownloader\Bing Downloader\obj\Debug\Bing Downloader.csprojAssemblyReference.cache
 C:\Users\INFONEW\Downloads\BingDownloader\Bing Downloader\obj\Debug\Bing_Downloader.formBing.resources
+C:\Users\INFONEW\Downloads\BingDownloader\Bing Downloader\obj\Debug\Bing_Downloader.formPreview.resources
 C:\Users\INFONEW\Downloads\BingDownloader\Bing Downloader\obj\Debug\Bing_Downloader.Properties.Resources.resources
 C:\Users\INFONEW\Downloads\BingDownloader\Bing Downloader\obj\Debug\Bing Downloader.csproj.GenerateResource.cache
 C:\Users\INFONEW\Downloads\BingDownloader\Bing Downloader\obj\Debug\Bing Downloader.csproj.CoreCompileInputs.cache
