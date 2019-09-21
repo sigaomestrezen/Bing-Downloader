@@ -28,27 +28,15 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.trbZoom = new System.Windows.Forms.TrackBar();
 			this.pnlPreview = new System.Windows.Forms.Panel();
 			this.pcbPreview = new System.Windows.Forms.PictureBox();
 			this.pcbOriginal = new System.Windows.Forms.PictureBox();
-			((System.ComponentModel.ISupportInitialize)(this.trbZoom)).BeginInit();
+			this.cboZoom = new System.Windows.Forms.ComboBox();
+			this.lblZoom = new System.Windows.Forms.Label();
 			this.pnlPreview.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pcbPreview)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pcbOriginal)).BeginInit();
 			this.SuspendLayout();
-			// 
-			// trbZoom
-			// 
-			this.trbZoom.Location = new System.Drawing.Point(13, 13);
-			this.trbZoom.Maximum = 5;
-			this.trbZoom.Minimum = 1;
-			this.trbZoom.Name = "trbZoom";
-			this.trbZoom.Size = new System.Drawing.Size(199, 45);
-			this.trbZoom.TabIndex = 1;
-			this.trbZoom.TickStyle = System.Windows.Forms.TickStyle.Both;
-			this.trbZoom.Value = 1;
-			this.trbZoom.Scroll += new System.EventHandler(this.trbZoom_Scroll);
 			// 
 			// pnlPreview
 			// 
@@ -58,9 +46,9 @@
 			this.pnlPreview.AutoScroll = true;
 			this.pnlPreview.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.pnlPreview.Controls.Add(this.pcbPreview);
-			this.pnlPreview.Location = new System.Drawing.Point(12, 64);
+			this.pnlPreview.Location = new System.Drawing.Point(12, 39);
 			this.pnlPreview.Name = "pnlPreview";
-			this.pnlPreview.Size = new System.Drawing.Size(776, 374);
+			this.pnlPreview.Size = new System.Drawing.Size(776, 399);
 			this.pnlPreview.TabIndex = 2;
 			// 
 			// pcbPreview
@@ -82,15 +70,41 @@
 			this.pcbOriginal.TabStop = false;
 			this.pcbOriginal.Visible = false;
 			// 
+			// cboZoom
+			// 
+			this.cboZoom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.cboZoom.FormattingEnabled = true;
+			this.cboZoom.Items.AddRange(new object[] {
+            "1x",
+            "2x",
+            "3x",
+            "4x",
+            "5x"});
+			this.cboZoom.Location = new System.Drawing.Point(74, 12);
+			this.cboZoom.Name = "cboZoom";
+			this.cboZoom.Size = new System.Drawing.Size(51, 21);
+			this.cboZoom.TabIndex = 4;
+			this.cboZoom.SelectedIndexChanged += new System.EventHandler(this.cboZoom_SelectedIndexChanged);
+			// 
+			// lblZoom
+			// 
+			this.lblZoom.AutoSize = true;
+			this.lblZoom.Location = new System.Drawing.Point(9, 15);
+			this.lblZoom.Name = "lblZoom";
+			this.lblZoom.Size = new System.Drawing.Size(59, 13);
+			this.lblZoom.TabIndex = 5;
+			this.lblZoom.Text = "Ampliação:";
+			// 
 			// formPreview
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = global::Bing_Downloader.Properties.Settings.Default.backcolor;
 			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.Controls.Add(this.lblZoom);
+			this.Controls.Add(this.cboZoom);
 			this.Controls.Add(this.pcbOriginal);
 			this.Controls.Add(this.pnlPreview);
-			this.Controls.Add(this.trbZoom);
 			this.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::Bing_Downloader.Properties.Settings.Default, "backcolor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.Icon = global::Bing_Downloader.Properties.Resources.icons8_bing;
@@ -101,7 +115,7 @@
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "formPreview";
 			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-			((System.ComponentModel.ISupportInitialize)(this.trbZoom)).EndInit();
+			this.Load += new System.EventHandler(this.formPreview_Load);
 			this.pnlPreview.ResumeLayout(false);
 			this.pnlPreview.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pcbPreview)).EndInit();
@@ -112,10 +126,10 @@
 		}
 
 		#endregion
-
-		private System.Windows.Forms.TrackBar trbZoom;
 		private System.Windows.Forms.Panel pnlPreview;
 		public System.Windows.Forms.PictureBox pcbPreview;
 		public System.Windows.Forms.PictureBox pcbOriginal;
+		private System.Windows.Forms.ComboBox cboZoom;
+		private System.Windows.Forms.Label lblZoom;
 	}
 }

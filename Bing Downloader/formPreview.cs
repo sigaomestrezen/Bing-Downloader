@@ -16,11 +16,17 @@ namespace Bing_Downloader
 			InitializeComponent();
 		}
 
-		private void trbZoom_Scroll(object sender, EventArgs e)
+		private void formPreview_Load(object sender, EventArgs e)
 		{
-			Size newSize = new Size((int)(pcbOriginal.Image.Width * trbZoom.Value), (int)(pcbOriginal.Image.Height * trbZoom.Value));
+			cboZoom.SelectedIndex = 0;
+		}
+
+		private void cboZoom_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			Size newSize = new Size(pcbOriginal.Image.Width * (cboZoom.SelectedIndex + 1), pcbOriginal.Image.Height * (cboZoom.SelectedIndex + 1));
 			Bitmap bmp = new Bitmap(pcbOriginal.Image, newSize);
 			pcbPreview.Image = bmp;
+
 		}
 	}
 }

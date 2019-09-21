@@ -23,3 +23,6 @@ C:\Users\INFONEW\Downloads\BingDownloader\Bing Downloader\obj\Debug\Bing Downloa
 C:\Users\INFONEW\Downloads\BingDownloader\Bing Downloader\obj\Debug\Bing Downloader.csproj.CoreCompileInputs.cache
 C:\Users\INFONEW\Downloads\BingDownloader\Bing Downloader\obj\Debug\Bing Downloader.exe
 C:\Users\INFONEW\Downloads\BingDownloader\Bing Downloader\obj\Debug\Bing Downloader.pdb
+G:\Backup\Backup\Backup\Vitor Hugo\CSharp14\Bing Downloader\Bing Downloader\obj\Debug\Bing Downloader.csprojAssemblyReference.cache
+G:\Backup\Backup\Backup\Vitor Hugo\CSharp14\Bing Downloader\Bing Downloader\obj\Debug\Bing_Downloader.formPreview.resources
+G:\Backup\Backup\Backup\Vitor Hugo\CSharp14\Bing Downloader\Bing Downloader\bin\Debug\Bing Downloader.exe.config
