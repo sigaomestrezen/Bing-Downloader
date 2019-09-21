@@ -56,7 +56,7 @@
 			this.pcbPreview.Location = new System.Drawing.Point(3, 3);
 			this.pcbPreview.Name = "pcbPreview";
 			this.pcbPreview.Size = new System.Drawing.Size(218, 134);
-			this.pcbPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+			this.pcbPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.pcbPreview.TabIndex = 1;
 			this.pcbPreview.TabStop = false;
 			// 
@@ -75,6 +75,7 @@
 			this.cboZoom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.cboZoom.FormattingEnabled = true;
 			this.cboZoom.Items.AddRange(new object[] {
+            "Automática",
             "1x",
             "2x",
             "3x",
@@ -82,7 +83,7 @@
             "5x"});
 			this.cboZoom.Location = new System.Drawing.Point(74, 12);
 			this.cboZoom.Name = "cboZoom";
-			this.cboZoom.Size = new System.Drawing.Size(51, 21);
+			this.cboZoom.Size = new System.Drawing.Size(115, 21);
 			this.cboZoom.TabIndex = 4;
 			this.cboZoom.SelectedIndexChanged += new System.EventHandler(this.cboZoom_SelectedIndexChanged);
 			// 
@@ -112,12 +113,10 @@
 			this.MinimizeBox = false;
 			this.Name = "formPreview";
 			this.ShowInTaskbar = false;
-			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+			this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
 			this.Text = "formPreview";
-			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
 			this.Load += new System.EventHandler(this.formPreview_Load);
 			this.pnlPreview.ResumeLayout(false);
-			this.pnlPreview.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pcbPreview)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pcbOriginal)).EndInit();
 			this.ResumeLayout(false);
