@@ -23,92 +23,196 @@ namespace Bing_Downloader
 
 		private void carregarImagem1()
 		{
-			pcbBackground1.Load(dgvImagens.Rows[0].Cells[dgcUrl.Index].Value.ToString());
-			Application.DoEvents();
+			try
+			{
+				pcbBackground1.Load(dgvImagens.Rows[0].Cells[dgcUrl.Index].Value.ToString());
+				Application.DoEvents();
+			} catch
+			{
+				pcbBackground1.Image = Properties.Resources.img;
+			}
 		}
 
 		private void carregarImagem2()
 		{
-			pcbBackground2.Load(dgvImagens.Rows[1].Cells[dgcUrl.Index].Value.ToString());
-			Application.DoEvents();
+			try
+			{
+				pcbBackground2.Load(dgvImagens.Rows[1].Cells[dgcUrl.Index].Value.ToString());
+				Application.DoEvents();
+			}
+			catch
+			{
+				pcbBackground2.Image = Properties.Resources.img;
+			}
 		}
 
 		private void carregarImagem3()
 		{
-			pcbBackground3.Load(dgvImagens.Rows[2].Cells[dgcUrl.Index].Value.ToString());
-			Application.DoEvents();
+			try
+			{
+				pcbBackground3.Load(dgvImagens.Rows[2].Cells[dgcUrl.Index].Value.ToString());
+				Application.DoEvents();
+			}
+			catch
+			{
+				pcbBackground3.Image = Properties.Resources.img;
+			}
 		}
 
 		private void carregarImagem4()
 		{
-			pcbBackground4.Load(dgvImagens.Rows[3].Cells[dgcUrl.Index].Value.ToString());
-			Application.DoEvents();
+			try
+			{
+				pcbBackground4.Load(dgvImagens.Rows[3].Cells[dgcUrl.Index].Value.ToString());
+				Application.DoEvents();
+			}
+			catch
+			{
+				pcbBackground4.Image = Properties.Resources.img;
+			}
 		}
 
 		private void carregarImagem5()
 		{
-			pcbBackground5.Load(dgvImagens.Rows[4].Cells[dgcUrl.Index].Value.ToString());
-			Application.DoEvents();
+			try
+			{
+				pcbBackground5.Load(dgvImagens.Rows[4].Cells[dgcUrl.Index].Value.ToString());
+				Application.DoEvents();
+			}
+			catch
+			{
+				pcbBackground5.Image = Properties.Resources.img;
+			}
 		}
 
 		private void carregarImagem6()
 		{
-			pcbBackground6.Load(dgvImagens.Rows[5].Cells[dgcUrl.Index].Value.ToString());
-			Application.DoEvents();
+			try
+			{
+				pcbBackground6.Load(dgvImagens.Rows[5].Cells[dgcUrl.Index].Value.ToString());
+				Application.DoEvents();
+			}
+			catch
+			{
+				pcbBackground6.Image = Properties.Resources.img;
+			}
 		}
 
 		private void carregarImagem7()
 		{
-			pcbBackground7.Load(dgvImagens.Rows[6].Cells[dgcUrl.Index].Value.ToString());
-			Application.DoEvents();
+			try
+			{
+				pcbBackground7.Load(dgvImagens.Rows[6].Cells[dgcUrl.Index].Value.ToString());
+				Application.DoEvents();
+			}
+			catch
+			{
+				pcbBackground7.Image = Properties.Resources.img;
+			}
 		}
 
 		private void carregarImagem8()
 		{
-			pcbBackground8.Load(dgvImagens.Rows[7].Cells[dgcUrl.Index].Value.ToString());
-			Application.DoEvents();
+			try
+			{
+				pcbBackground8.Load(dgvImagens.Rows[7].Cells[dgcUrl.Index].Value.ToString());
+				Application.DoEvents();
+			}
+			catch
+			{
+				pcbBackground8.Image = Properties.Resources.img;
+			}
 		}
 
 		private void carregarImagem9()
 		{
-			pcbBackground9.Load(dgvImagens.Rows[9].Cells[dgcUrl.Index].Value.ToString());
-			Application.DoEvents();
+			try
+			{
+				pcbBackground9.Load(dgvImagens.Rows[9].Cells[dgcUrl.Index].Value.ToString());
+				Application.DoEvents();
+			}
+			catch
+			{
+				pcbBackground9.Image = Properties.Resources.img;
+			}
 		}
 
 		private void carregarImagem10()
 		{
-			pcbBackground10.Load(dgvImagens.Rows[10].Cells[dgcUrl.Index].Value.ToString());
-			Application.DoEvents();
+			try
+			{
+				pcbBackground10.Load(dgvImagens.Rows[10].Cells[dgcUrl.Index].Value.ToString());
+				Application.DoEvents();
+			}
+			catch
+			{
+				pcbBackground10.Image = Properties.Resources.img;
+			}
 		}
 
 		private void carregarImagem11()
 		{
-			pcbBackground11.Load(dgvImagens.Rows[11].Cells[dgcUrl.Index].Value.ToString());
-			Application.DoEvents();
+			try
+			{
+				pcbBackground11.Load(dgvImagens.Rows[11].Cells[dgcUrl.Index].Value.ToString());
+				Application.DoEvents();
+			}
+			catch
+			{
+				pcbBackground11.Image = Properties.Resources.img;
+			}
 		}
 
 		private void carregarImagem12()
 		{
-			pcbBackground12.Load(dgvImagens.Rows[12].Cells[dgcUrl.Index].Value.ToString());
-			Application.DoEvents();
+			try
+			{
+				pcbBackground12.Load(dgvImagens.Rows[12].Cells[dgcUrl.Index].Value.ToString());
+				Application.DoEvents();
+			}
+			catch
+			{
+				pcbBackground12.Image = Properties.Resources.img;
+			}
 		}
 
 		private void carregarImagem13()
 		{
-			pcbBackground13.Load(dgvImagens.Rows[13].Cells[dgcUrl.Index].Value.ToString());
-			Application.DoEvents();
+			try
+			{
+				pcbBackground13.Load(dgvImagens.Rows[13].Cells[dgcUrl.Index].Value.ToString());
+				Application.DoEvents();
+			}
+			catch
+			{
+				pcbBackground13.Image = Properties.Resources.img;
+			}
 		}
 
 		private void carregarImagem14()
 		{
-			pcbBackground14.Load(dgvImagens.Rows[14].Cells[dgcUrl.Index].Value.ToString());
-			Application.DoEvents();
+			try
+			{
+				pcbBackground14.Load(dgvImagens.Rows[14].Cells[dgcUrl.Index].Value.ToString());
+				Application.DoEvents();
+			}
+			catch
+			{
+				pcbBackground14.Image = Properties.Resources.img;
+			}
 		}
 
 		private void carregarImagem15()
 		{
-			pcbBackground15.Load(dgvImagens.Rows[15].Cells[dgcUrl.Index].Value.ToString());
-			Application.DoEvents();
+			try
+			{
+				pcbBackground15.Load(dgvImagens.Rows[15].Cells[dgcUrl.Index].Value.ToString());
+				Application.DoEvents();
+			}
+			catch
+			{
+				pcbBackground15.Image = Properties.Resources.img;
+			}
 		}
 
 		private void filtrarDados()
