@@ -20,7 +20,6 @@ C:\Users\INFONEW\Downloads\BingDownloader\Bing Downloader\obj\Debug\Bing_Downloa
 C:\Users\INFONEW\Downloads\BingDownloader\Bing Downloader\obj\Debug\Bing_Downloader.formPreview.resources
 C:\Users\INFONEW\Downloads\BingDownloader\Bing Downloader\obj\Debug\Bing_Downloader.Properties.Resources.resources
 C:\Users\INFONEW\Downloads\BingDownloader\Bing Downloader\obj\Debug\Bing Downloader.csproj.GenerateResource.cache
-C:\Users\INFONEW\Downloads\BingDownloader\Bing Downloader\obj\Debug\Bing Downloader.csproj.CoreCompileInputs.cache
 C:\Users\INFONEW\Downloads\BingDownloader\Bing Downloader\obj\Debug\Bing Downloader.exe
 C:\Users\INFONEW\Downloads\BingDownloader\Bing Downloader\obj\Debug\Bing Downloader.pdb
 G:\Backup\Backup\Backup\Vitor Hugo\CSharp14\Bing Downloader\Bing Downloader\obj\Debug\Bing Downloader.csprojAssemblyReference.cache
@@ -36,3 +35,14 @@ C:\Users\sigao\Documents\GitHub\BingDownloader\Bing Downloader\obj\Debug\Bing Do
 C:\Users\sigao\Documents\GitHub\BingDownloader\Bing Downloader\obj\Debug\Bing Downloader.csproj.CoreCompileInputs.cache
 C:\Users\sigao\Documents\GitHub\BingDownloader\Bing Downloader\obj\Debug\Bing Downloader.exe
 C:\Users\sigao\Documents\GitHub\BingDownloader\Bing Downloader\obj\Debug\Bing Downloader.pdb
+C:\Users\INFONEW\Downloads\BingDownloader\Bing Downloader\obj\Debug\Bing Downloader.csprojAssemblyReference.cache
+D:\Arquivos 2018\BingDownloader\Bing Downloader\bin\Debug\Bing Downloader.exe.config
+D:\Arquivos 2018\BingDownloader\Bing Downloader\bin\Debug\Bing Downloader.exe
+D:\Arquivos 2018\BingDownloader\Bing Downloader\bin\Debug\Bing Downloader.pdb
+D:\Arquivos 2018\BingDownloader\Bing Downloader\obj\Debug\Bing Downloader.csprojAssemblyReference.cache
+D:\Arquivos 2018\BingDownloader\Bing Downloader\obj\Debug\Bing_Downloader.formBing.resources
+D:\Arquivos 2018\BingDownloader\Bing Downloader\obj\Debug\Bing_Downloader.formPreview.resources
+D:\Arquivos 2018\BingDownloader\Bing Downloader\obj\Debug\Bing_Downloader.Properties.Resources.resources
+D:\Arquivos 2018\BingDownloader\Bing Downloader\obj\Debug\Bing Downloader.csproj.GenerateResource.cache
+D:\Arquivos 2018\BingDownloader\Bing Downloader\obj\Debug\Bing Downloader.exe
+D:\Arquivos 2018\BingDownloader\Bing Downloader\obj\Debug\Bing Downloader.pdb
