@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 using System.Windows.Forms;
 using System.Net;
@@ -10,6 +10,7 @@ namespace Bing_Downloader
 {
 	public partial class formBing : Form
 	{
+    //Fonte de pesquisa: https://stackoverflow.com/questions/10639914/is-there-a-way-to-get-bings-photo-of-the-day/23150436#23150436
 		ArrayList vData = new ArrayList();
 		ArrayList vNomeArquivo = new ArrayList();
 		ArrayList vDesc = new ArrayList();
